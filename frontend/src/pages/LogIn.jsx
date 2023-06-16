@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { clearError, login } from "../redux/reducers/userReducer";
-import { toast } from "react-toastify";
+import { login } from "../redux/reducers/userReducer";
 import Loading from "../components/Loading";
 
 const LogIn = () => {
