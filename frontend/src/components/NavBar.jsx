@@ -5,18 +5,10 @@ import Hero from "./Hero";
 
 const NavBar = () => {
   return (
-    <div className="border-[1px] border-b-black">
-      <div className="flex flex-col list-none items-center justify-center ">
-        <div className="flex items-center justify-center gap-8 ">
-          <li className="text-xl font-semibold py-[5px] px-5 rounded-full border-[1px] border-sky-500 mt-3 hover:bg-sky-500 duration-200 hover:text-white cursor-pointer ">
-            <Link to="products">Products</Link>
-          </li>
-          <li className="text-xl font-semibold py-[5px] px-5 rounded-full border-[1px] border-sky-500 mt-3 hover:bg-sky-500 duration-200 hover:text-white cursor-pointer ">
-            <Link to="beast-selling">Beast Selling</Link>
-          </li>
-        </div>
+    <div>
+      <div className="hidden md:flex flex-col list-none items-center justify-center ">
         <Anchor
-          className="pt-6 px-8"
+          className="pt-6 px-8 bg-white rounded-xl -mt-4 py-3"
           direction="horizontal"
           items={[
             {

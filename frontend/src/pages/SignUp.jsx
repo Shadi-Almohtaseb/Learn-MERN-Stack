@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
-// import { RxAvatar } from "react-icons/rx";
 import { Link, useNavigate } from "react-router-dom";
 import { signup } from "../redux/reducers/userReducer";
 import Loading from "../components/Loading";
@@ -24,13 +23,6 @@ const SignUp = () => {
     }
   }, [navigate, user]);
 
-  //   const [avatar, setAvatar] = useState(null);
-
-  //   const handleFileInputChange = (e) => {
-  //     const file = e.target.files[0];
-  //     setAvatar(file);
-  //   };
-
   const dispatch = useDispatch();
 
   const handleSubmit = async (e) => {
@@ -40,27 +32,6 @@ const SignUp = () => {
     } else {
       toast.error("Passwords Does not match");
     }
-    // const config = { headers: { "Content-Type": "multipart/form-data" } };
-
-    // const newForm = new FormData();
-
-    // newForm.append("file", avatar);
-    // newForm.append("name", name);
-    // newForm.append("email", email);
-    // newForm.append("password", password);
-
-    // axios
-    //   .post(`${server}/user/create-user`, newForm, config)
-    //   .then((res) => {
-    //     toast.success(res.data.message);
-    //     setName("");
-    //     setEmail("");
-    //     setPassword("");
-    //     setAvatar();
-    //   })
-    //   .catch((error) => {
-    //     toast.error(error.response.data.message);
-    //   });
   };
 
   return (
