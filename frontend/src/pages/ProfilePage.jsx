@@ -4,9 +4,12 @@ import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { logout } from "../redux/reducers/userReducer";
 import Loading from "../components/Loading";
-import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import {
+  AiOutlineArrowLeft,
+  AiOutlineEye,
+  AiOutlineEyeInvisible,
+} from "react-icons/ai";
 import profileImage from "../assets/images/avatar3.png";
-import UserSideBar from "../components/userSideBar";
 
 import {
   MenuFoldOutlined,
@@ -93,6 +96,8 @@ const ProfilePage = () => {
             style={{
               padding: 0,
               background: colorBgContainer,
+              display: "flex",
+              justifyContent: "space-between",
             }}
           >
             <Button
@@ -105,6 +110,17 @@ const ProfilePage = () => {
                 height: 64,
               }}
             />
+            <Link to="/">
+              <Button
+                type="text"
+                icon={<AiOutlineArrowLeft />}
+                style={{
+                  fontSize: "16px",
+                  width: 64,
+                  height: 64,
+                }}
+              />
+            </Link>
           </Header>
           <Content
             style={{
@@ -123,11 +139,6 @@ const ProfilePage = () => {
                     className="rounded-full w-40"
                   />
                 </h2>
-                <Link to="/">
-                  <button className="mt-6 px-6 py-2 rounded-full bg-blue-500 text-white font-semibold text-xl cursor-pointer border-[1px] border-blue-500 hover:bg-transparent hover:text-blue-500 duration-200">
-                    Home
-                  </button>
-                </Link>
               </div>
 
               <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">

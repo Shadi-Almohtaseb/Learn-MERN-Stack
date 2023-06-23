@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Anchor } from "antd";
 import Hero from "./Hero";
+import Products from "../pages/Products";
 
 const NavBar = () => {
   return (
@@ -39,14 +40,7 @@ const NavBar = () => {
         />
       </div>
       <Hero />
-      <div
-        id="categories"
-        style={{
-          height: "100vh",
-          textAlign: "center",
-          background: "#F4EAD5",
-        }}
-      />
+      <Products />
       <div
         id="products"
         style={{
