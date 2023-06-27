@@ -6,7 +6,7 @@
   "scripts": {
     "test": "node backend/server.js",
     "server": "nodemon backend/server.js",
-    "div": "node server.js"
+    "start": "node server.js"
   },
   "author": "shadi almohtaseb",
   "license": "ISC",
