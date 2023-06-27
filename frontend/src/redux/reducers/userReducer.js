@@ -3,19 +3,18 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { serverURL } from "../../server";
 
 // Async thunk for login
+//http://localhost:8000
 export const login = createAsyncThunk(
   "auth/login",
   async ({ email, password }) => {
     try {
-      const response = await axios.post(
-        "http://localhost:8000/api/users/auth",
-        {
-          email,
-          password,
-        }
-      );
+      const response = await axios.post(`${serverURL}/api/users/auth`, {
+        email,
+        password,
+      });
       const user = response.data;
       console.log(user);
       return user;
@@ -27,11 +26,12 @@ export const login = createAsyncThunk(
 );
 
 // Async thunk for signup
+//http://localhost:8000
 export const signup = createAsyncThunk(
   "auth/signup",
   async ({ name, email, password }) => {
     try {
-      const response = await axios.post("http://localhost:8000/api/users", {
+      const response = await axios.post(`${serverURL}/api/users`, {
         name,
         email,
         password,
