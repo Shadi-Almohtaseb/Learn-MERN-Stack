@@ -10,7 +10,8 @@ in this project, I used react.js and tailwind CSS and ant design for my frontend
  - save the token in the cookies
  - make protected routes for user and admin
  - CRUD operation
- - Ant Design and Tailwind CSS And Toast notification for the forntend
+ - Ant Design and Tailwind CSS And Toast notification for the front-end
+ - Redux toolkit to manage my states
 
 ## Demo
 
